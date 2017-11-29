@@ -1,0 +1,606 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		66AF1EC21FCF261D008E8E36 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF1EC11FCF261D008E8E36 /* AppDelegate.swift */; };
+		66AF1EC41FCF261D008E8E36 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF1EC31FCF261D008E8E36 /* ViewController.swift */; };
+		66AF1EC71FCF261D008E8E36 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66AF1EC51FCF261D008E8E36 /* Main.storyboard */; };
+		66AF1EC91FCF261D008E8E36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66AF1EC81FCF261D008E8E36 /* Assets.xcassets */; };
+		66AF1ECC1FCF261D008E8E36 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66AF1ECA1FCF261D008E8E36 /* LaunchScreen.storyboard */; };
+		66AF1ED11FCF261D008E8E36 /* restaurant WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 66AF1ED01FCF261D008E8E36 /* restaurant WatchKit App.app */; };
+		66AF1ED71FCF261D008E8E36 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 66AF1ED51FCF261D008E8E36 /* Interface.storyboard */; };
+		66AF1ED91FCF261D008E8E36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66AF1ED81FCF261D008E8E36 /* Assets.xcassets */; };
+		66AF1EE01FCF261D008E8E36 /* restaurant WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 66AF1EDF1FCF261D008E8E36 /* restaurant WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		66AF1EE51FCF261D008E8E36 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF1EE41FCF261D008E8E36 /* InterfaceController.swift */; };
+		66AF1EE71FCF261D008E8E36 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF1EE61FCF261D008E8E36 /* ExtensionDelegate.swift */; };
+		66AF1EE91FCF261E008E8E36 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 66AF1EE81FCF261E008E8E36 /* Assets.xcassets */; };
+		66AF1EFB1FCF342C008E8E36 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF1EFA1FCF342C008E8E36 /* ApiService.swift */; };
+		66AF1EFD1FCF3A25008E8E36 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF1EFC1FCF3A25008E8E36 /* Restaurant.swift */; };
+		66AF1F001FCF3B39008E8E36 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF1EFC1FCF3A25008E8E36 /* Restaurant.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		66AF1ED21FCF261D008E8E36 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66AF1EB61FCF261D008E8E36 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66AF1ECF1FCF261D008E8E36;
+			remoteInfo = "restaurant WatchKit App";
+		};
+		66AF1EE11FCF261D008E8E36 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66AF1EB61FCF261D008E8E36 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66AF1EDE1FCF261D008E8E36;
+			remoteInfo = "restaurant WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		66AF1EF01FCF261E008E8E36 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				66AF1EE01FCF261D008E8E36 /* restaurant WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66AF1EF41FCF261E008E8E36 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				66AF1ED11FCF261D008E8E36 /* restaurant WatchKit App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		66AF1EBE1FCF261D008E8E36 /* restaurant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = restaurant.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		66AF1EC11FCF261D008E8E36 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		66AF1EC31FCF261D008E8E36 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		66AF1EC61FCF261D008E8E36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		66AF1EC81FCF261D008E8E36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		66AF1ECB1FCF261D008E8E36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		66AF1ECD1FCF261D008E8E36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66AF1ED01FCF261D008E8E36 /* restaurant WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "restaurant WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		66AF1ED61FCF261D008E8E36 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		66AF1ED81FCF261D008E8E36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		66AF1EDA1FCF261D008E8E36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66AF1EDF1FCF261D008E8E36 /* restaurant WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "restaurant WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		66AF1EE41FCF261D008E8E36 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		66AF1EE61FCF261D008E8E36 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		66AF1EE81FCF261E008E8E36 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		66AF1EEA1FCF261E008E8E36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66AF1EFA1FCF342C008E8E36 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		66AF1EFC1FCF3A25008E8E36 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		66AF1EBB1FCF261D008E8E36 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66AF1EDC1FCF261D008E8E36 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		66AF1EB51FCF261D008E8E36 = {
+			isa = PBXGroup;
+			children = (
+				66AF1EC01FCF261D008E8E36 /* restaurant */,
+				66AF1ED41FCF261D008E8E36 /* restaurant WatchKit App */,
+				66AF1EE31FCF261D008E8E36 /* restaurant WatchKit Extension */,
+				66AF1EBF1FCF261D008E8E36 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		66AF1EBF1FCF261D008E8E36 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				66AF1EBE1FCF261D008E8E36 /* restaurant.app */,
+				66AF1ED01FCF261D008E8E36 /* restaurant WatchKit App.app */,
+				66AF1EDF1FCF261D008E8E36 /* restaurant WatchKit Extension.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		66AF1EC01FCF261D008E8E36 /* restaurant */ = {
+			isa = PBXGroup;
+			children = (
+				66AF1EC11FCF261D008E8E36 /* AppDelegate.swift */,
+				66AF1EC31FCF261D008E8E36 /* ViewController.swift */,
+				66AF1EC51FCF261D008E8E36 /* Main.storyboard */,
+				66AF1EC81FCF261D008E8E36 /* Assets.xcassets */,
+				66AF1ECA1FCF261D008E8E36 /* LaunchScreen.storyboard */,
+				66AF1ECD1FCF261D008E8E36 /* Info.plist */,
+				66AF1EFA1FCF342C008E8E36 /* ApiService.swift */,
+			);
+			path = restaurant;
+			sourceTree = "<group>";
+		};
+		66AF1ED41FCF261D008E8E36 /* restaurant WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				66AF1ED51FCF261D008E8E36 /* Interface.storyboard */,
+				66AF1ED81FCF261D008E8E36 /* Assets.xcassets */,
+				66AF1EDA1FCF261D008E8E36 /* Info.plist */,
+			);
+			path = "restaurant WatchKit App";
+			sourceTree = "<group>";
+		};
+		66AF1EE31FCF261D008E8E36 /* restaurant WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				66AF1EE41FCF261D008E8E36 /* InterfaceController.swift */,
+				66AF1EE61FCF261D008E8E36 /* ExtensionDelegate.swift */,
+				66AF1EE81FCF261E008E8E36 /* Assets.xcassets */,
+				66AF1EEA1FCF261E008E8E36 /* Info.plist */,
+				66AF1EFC1FCF3A25008E8E36 /* Restaurant.swift */,
+			);
+			path = "restaurant WatchKit Extension";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		66AF1EBD1FCF261D008E8E36 /* restaurant */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66AF1EF51FCF261E008E8E36 /* Build configuration list for PBXNativeTarget "restaurant" */;
+			buildPhases = (
+				66AF1EBA1FCF261D008E8E36 /* Sources */,
+				66AF1EBB1FCF261D008E8E36 /* Frameworks */,
+				66AF1EBC1FCF261D008E8E36 /* Resources */,
+				66AF1EF41FCF261E008E8E36 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				66AF1ED31FCF261D008E8E36 /* PBXTargetDependency */,
+			);
+			name = restaurant;
+			productName = restaurant;
+			productReference = 66AF1EBE1FCF261D008E8E36 /* restaurant.app */;
+			productType = "com.apple.product-type.application";
+		};
+		66AF1ECF1FCF261D008E8E36 /* restaurant WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66AF1EF11FCF261E008E8E36 /* Build configuration list for PBXNativeTarget "restaurant WatchKit App" */;
+			buildPhases = (
+				66AF1ECE1FCF261D008E8E36 /* Resources */,
+				66AF1EF01FCF261E008E8E36 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				66AF1EE21FCF261D008E8E36 /* PBXTargetDependency */,
+			);
+			name = "restaurant WatchKit App";
+			productName = "restaurant WatchKit App";
+			productReference = 66AF1ED01FCF261D008E8E36 /* restaurant WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		66AF1EDE1FCF261D008E8E36 /* restaurant WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66AF1EED1FCF261E008E8E36 /* Build configuration list for PBXNativeTarget "restaurant WatchKit Extension" */;
+			buildPhases = (
+				66AF1EDB1FCF261D008E8E36 /* Sources */,
+				66AF1EDC1FCF261D008E8E36 /* Frameworks */,
+				66AF1EDD1FCF261D008E8E36 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "restaurant WatchKit Extension";
+			productName = "restaurant WatchKit Extension";
+			productReference = 66AF1EDF1FCF261D008E8E36 /* restaurant WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		66AF1EB61FCF261D008E8E36 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0910;
+				LastUpgradeCheck = 0910;
+				ORGANIZATIONNAME = ESGI;
+				TargetAttributes = {
+					66AF1EBD1FCF261D008E8E36 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					66AF1ECF1FCF261D008E8E36 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+					66AF1EDE1FCF261D008E8E36 = {
+						CreatedOnToolsVersion = 9.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 66AF1EB91FCF261D008E8E36 /* Build configuration list for PBXProject "restaurant" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 66AF1EB51FCF261D008E8E36;
+			productRefGroup = 66AF1EBF1FCF261D008E8E36 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				66AF1EBD1FCF261D008E8E36 /* restaurant */,
+				66AF1ECF1FCF261D008E8E36 /* restaurant WatchKit App */,
+				66AF1EDE1FCF261D008E8E36 /* restaurant WatchKit Extension */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		66AF1EBC1FCF261D008E8E36 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66AF1ECC1FCF261D008E8E36 /* LaunchScreen.storyboard in Resources */,
+				66AF1EC91FCF261D008E8E36 /* Assets.xcassets in Resources */,
+				66AF1EC71FCF261D008E8E36 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66AF1ECE1FCF261D008E8E36 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66AF1ED91FCF261D008E8E36 /* Assets.xcassets in Resources */,
+				66AF1ED71FCF261D008E8E36 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66AF1EDD1FCF261D008E8E36 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66AF1EE91FCF261E008E8E36 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		66AF1EBA1FCF261D008E8E36 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66AF1F001FCF3B39008E8E36 /* Restaurant.swift in Sources */,
+				66AF1EC41FCF261D008E8E36 /* ViewController.swift in Sources */,
+				66AF1EC21FCF261D008E8E36 /* AppDelegate.swift in Sources */,
+				66AF1EFB1FCF342C008E8E36 /* ApiService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66AF1EDB1FCF261D008E8E36 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66AF1EE71FCF261D008E8E36 /* ExtensionDelegate.swift in Sources */,
+				66AF1EE51FCF261D008E8E36 /* InterfaceController.swift in Sources */,
+				66AF1EFD1FCF3A25008E8E36 /* Restaurant.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		66AF1ED31FCF261D008E8E36 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66AF1ECF1FCF261D008E8E36 /* restaurant WatchKit App */;
+			targetProxy = 66AF1ED21FCF261D008E8E36 /* PBXContainerItemProxy */;
+		};
+		66AF1EE21FCF261D008E8E36 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66AF1EDE1FCF261D008E8E36 /* restaurant WatchKit Extension */;
+			targetProxy = 66AF1EE11FCF261D008E8E36 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		66AF1EC51FCF261D008E8E36 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66AF1EC61FCF261D008E8E36 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		66AF1ECA1FCF261D008E8E36 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66AF1ECB1FCF261D008E8E36 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		66AF1ED51FCF261D008E8E36 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				66AF1ED61FCF261D008E8E36 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		66AF1EEB1FCF261E008E8E36 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		66AF1EEC1FCF261E008E8E36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		66AF1EEE1FCF261E008E8E36 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "restaurant WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.esgi.restaurant.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.1;
+			};
+			name = Debug;
+		};
+		66AF1EEF1FCF261E008E8E36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "restaurant WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.esgi.restaurant.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.1;
+			};
+			name = Release;
+		};
+		66AF1EF21FCF261E008E8E36 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				IBSC_MODULE = restaurant_WatchKit_Extension;
+				INFOPLIST_FILE = "restaurant WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.esgi.restaurant.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.1;
+			};
+			name = Debug;
+		};
+		66AF1EF31FCF261E008E8E36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				IBSC_MODULE = restaurant_WatchKit_Extension;
+				INFOPLIST_FILE = "restaurant WatchKit App/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = com.esgi.restaurant.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.1;
+			};
+			name = Release;
+		};
+		66AF1EF61FCF261E008E8E36 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = restaurant/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.esgi.restaurant;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		66AF1EF71FCF261E008E8E36 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = restaurant/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.esgi.restaurant;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		66AF1EB91FCF261D008E8E36 /* Build configuration list for PBXProject "restaurant" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66AF1EEB1FCF261E008E8E36 /* Debug */,
+				66AF1EEC1FCF261E008E8E36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66AF1EED1FCF261E008E8E36 /* Build configuration list for PBXNativeTarget "restaurant WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66AF1EEE1FCF261E008E8E36 /* Debug */,
+				66AF1EEF1FCF261E008E8E36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66AF1EF11FCF261E008E8E36 /* Build configuration list for PBXNativeTarget "restaurant WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66AF1EF21FCF261E008E8E36 /* Debug */,
+				66AF1EF31FCF261E008E8E36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66AF1EF51FCF261E008E8E36 /* Build configuration list for PBXNativeTarget "restaurant" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66AF1EF61FCF261E008E8E36 /* Debug */,
+				66AF1EF71FCF261E008E8E36 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 66AF1EB61FCF261D008E8E36 /* Project object */;
+}
