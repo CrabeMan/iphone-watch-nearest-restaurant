@@ -12,8 +12,8 @@ class ViewController: UIViewController {
             session.activate()
         }
         let params:[String : Any] = [
-            "lat": "40.7570611111",
-            "lon": "-73.9219138889"]
+            "lat": "48.8752937317",
+            "lon": "2.2851102352"]
         
         
         
