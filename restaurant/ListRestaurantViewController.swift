@@ -11,8 +11,6 @@ import WatchConnectivity
 
 class ListRestaurantViewController: UIViewController {
     
-
-
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,23 +20,23 @@ class ListRestaurantViewController: UIViewController {
             session.activate()
         }
         
-        let params:[String : Any] = [
-            "lat": "48.8752937317",
-            "lon": "2.2851102352"]
-        
-
-        ApiService.callPost(url: Configuration.environment + "restaurant/nearest", params: params) { (message, data) in
-            print(message)
-            do {
-                if let jsonData = data {
-                    if let restaurant = try JSONDecoder().decode([Restaurant].self, from: jsonData) as [Restaurant]? {
-                        print(restaurant)
-                    }
+        let repo = ApiRestaurantRepository()
+        repo.getNearest(lat: "48.8752937317", long: "2.2851102352") { (result) in
+            
+            guard let data = result.success else {
+                
+                if let error = result.error {
+                    print(error)
                 }
-            } catch {
-                print("Parse Error: \(error)")
+                
+                return
             }
+            
+            print(data)
+        
         }
+        
+    
         
         // Do any additional setup after loading the view.
     }

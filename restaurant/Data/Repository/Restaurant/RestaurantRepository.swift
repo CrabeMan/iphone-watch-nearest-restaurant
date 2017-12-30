@@ -10,9 +10,9 @@ import Foundation
 
 protocol RestaurantRepository{
     
-    func findAll() -> [Restaurant]
+    func findAll(completion: (Result<[Restaurant]>) -> (Void))
     
-    func find(id : NSInteger) -> Restaurant?
+    func find(id: String, completion: (Result<Restaurant>) -> (Void))
     
-    func getNearest(lat : String, long : String) -> [Restaurant]
+    func getNearest(lat: String, long: String, completion: @escaping (Result<[Restaurant]>) -> (Void)) 
 }
