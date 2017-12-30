@@ -25,6 +25,7 @@
 		66AF1EFB1FCF342C008E8E36 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF1EFA1FCF342C008E8E36 /* ApiService.swift */; };
 		66AF1EFD1FCF3A25008E8E36 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF1EFC1FCF3A25008E8E36 /* Restaurant.swift */; };
 		66AF1F001FCF3B39008E8E36 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF1EFC1FCF3A25008E8E36 /* Restaurant.swift */; };
+		C4065AFD1FF81C6E0026797D /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4065AFC1FF81C6E0026797D /* Configuration.swift */; };
 		C43F0AE91FF8139A002F7318 /* ListRestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43F0AE71FF8139A002F7318 /* ListRestaurantViewController.swift */; };
 		C43F0AEA1FF8139A002F7318 /* ListRestaurantViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C43F0AE81FF8139A002F7318 /* ListRestaurantViewController.xib */; };
 		C43F0AF01FF8182F002F7318 /* RestaurantRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C43F0AEF1FF8182F002F7318 /* RestaurantRepository.swift */; };
@@ -97,6 +98,7 @@
 		66AF1EEA1FCF261E008E8E36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66AF1EFA1FCF342C008E8E36 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		66AF1EFC1FCF3A25008E8E36 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		C4065AFC1FF81C6E0026797D /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		C43F0AE71FF8139A002F7318 /* ListRestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRestaurantViewController.swift; sourceTree = "<group>"; };
 		C43F0AE81FF8139A002F7318 /* ListRestaurantViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListRestaurantViewController.xib; sourceTree = "<group>"; };
 		C43F0AEF1FF8182F002F7318 /* RestaurantRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantRepository.swift; sourceTree = "<group>"; };
@@ -204,6 +206,7 @@
 			children = (
 				C43F0AF11FF8186E002F7318 /* Model */,
 				C43F0AEC1FF8161C002F7318 /* Repository */,
+				C4065AFC1FF81C6E0026797D /* Configuration.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -411,6 +414,7 @@
 			files = (
 				C43F0AE91FF8139A002F7318 /* ListRestaurantViewController.swift in Sources */,
 				66AF1F001FCF3B39008E8E36 /* Restaurant.swift in Sources */,
+				C4065AFD1FF81C6E0026797D /* Configuration.swift in Sources */,
 				C43F0AF01FF8182F002F7318 /* RestaurantRepository.swift in Sources */,
 				66AF1EC21FCF261D008E8E36 /* AppDelegate.swift in Sources */,
 				66AF1EFB1FCF342C008E8E36 /* ApiService.swift in Sources */,

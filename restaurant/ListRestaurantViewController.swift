@@ -11,7 +11,7 @@ import WatchConnectivity
 
 class ListRestaurantViewController: UIViewController {
     
-    let BASE_URL = "http://localhost:5000/restaurant/nearest"
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +27,7 @@ class ListRestaurantViewController: UIViewController {
             "lon": "2.2851102352"]
         
 
-        ApiService.callPost(url: BASE_URL, params: params) { (message, data) in
+        ApiService.callPost(url: Configuration.environment + "restaurant/nearest", params: params) { (message, data) in
             print(message)
             do {
                 if let jsonData = data {
