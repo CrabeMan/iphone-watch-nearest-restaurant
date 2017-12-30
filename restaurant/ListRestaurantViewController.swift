@@ -1,24 +1,33 @@
+//
+//  ListRestaurantViewController.swift
+//  restaurant
+//
+//  Created by Mohson Butt [DAN-PARIS] on 30/12/2017.
+//  Copyright © 2017 ESGI. All rights reserved.
+//
+
 import UIKit
 import WatchConnectivity
 
-
-class ViewController: UIViewController {
+class ListRestaurantViewController: UIViewController {
+    
+    let BASE_URL = "http://localhost:5000/restaurant/nearest"
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         if WCSession.isSupported() {
             let session = WCSession.default
             session.delegate = self
             session.activate()
         }
+        
         let params:[String : Any] = [
             "lat": "48.8752937317",
             "lon": "2.2851102352"]
         
-        
-        
-        
-        ApiService.callPost(url: "http://mustache.labite.win:5000/restaurant/nearest", params: params) { (message, data) in
+
+        ApiService.callPost(url: BASE_URL, params: params) { (message, data) in
             print(message)
             do {
                 if let jsonData = data {
@@ -30,16 +39,18 @@ class ViewController: UIViewController {
                 print("Parse Error: \(error)")
             }
         }
+        
+        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
-
-
+    
 }
 
-extension ViewController : WCSessionDelegate {
+extension ListRestaurantViewController : WCSessionDelegate {
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
         
     }
