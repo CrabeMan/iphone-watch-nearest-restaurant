@@ -24,19 +24,14 @@ class ListRestaurantViewController: UIViewController {
         repo.getNearest(lat: "48.8752937317", long: "2.2851102352") { (result) in
             
             guard let data = result.success else {
-                
                 if let error = result.error {
                     print(error)
                 }
                 
                 return
             }
-            
-            print(data)
-        
+                    
         }
-        
-    
         
         // Do any additional setup after loading the view.
     }
