@@ -9,15 +9,12 @@
 import UIKit
 import WatchConnectivity
 
-class ListRestaurantViewController: UIViewController {
-    
-    var fruits = ["Apple", "Apricot", "Banana", "Blueberry", "Cantaloupe", "Cherry",
-                  "Clementine", "Coconut", "Cranberry", "Fig", "Grape", "Grapefruit",
-                  "Kiwi fruit", "Lemon", "Lime", "Lychee", "Mandarine", "Mango",
-                  "Melon", "Nectarine", "Olive", "Orange", "Papaya", "Peach",
-                  "Pear", "Pineapple", "Raspberry", "Strawberry"]
-    
+class ListRestaurantViewController: UIViewController{
+
     @IBOutlet weak var tableViewRestaurant: UITableView!
+    @IBOutlet weak var animateLoading: UIActivityIndicatorView!
+    
+    private let listPresenter = ListRestaurantPresenter(repo: ApiRestaurantRepository())
     
     var restaurant : [Restaurant] = [] {
         didSet {
@@ -29,9 +26,10 @@ class ListRestaurantViewController: UIViewController {
         super.viewDidLoad()
         
         self.navigationItem.title = "Liste Restaurant"
-        
         self.tableViewRestaurant.delegate = self;
         self.tableViewRestaurant.dataSource = self;
+        
+        self.listPresenter.attachView(view: self)
         
         if WCSession.isSupported() {
             let session = WCSession.default
@@ -39,21 +37,8 @@ class ListRestaurantViewController: UIViewController {
             session.activate()
         }
         
-        let repo = ApiRestaurantRepository()
-        repo.getNearest(lat: "48.8752937317", long: "2.2851102352") { (result) in
-            
-            guard let data = result.success else {
-                if let error = result.error {
-                    print(error)
-                }
-                return
-            }
-            
-            self.restaurant = data
-        
-        }
-        
-        // Do any additional setup after loading the view.
+        self.listPresenter.getNearestRest(lat: "48.8752937317", long: "2.2851102352")
+    
     }
 
     func reloadRows()  {
@@ -89,6 +74,30 @@ extension ListRestaurantViewController : UITableViewDataSource{
         return cell
     }
     
+}
+extension ListRestaurantViewController : ListRestaurantView{
+    func startLoading() {
+        self.animateLoading.startAnimating()
+    }
+    
+    func finishLoading() {
+        self.animateLoading.stopAnimating()
+    }
+    
+    func setListRestaurant(res : [Restaurant]){
+        self.restaurant = res
+        DispatchQueue.main.async{
+            self.tableViewRestaurant.isHidden = false;
+            self.finishLoading()
+        }
+    }
+    
+    func setEmptyRestaurant() {
+        DispatchQueue.main.async{
+            self.tableViewRestaurant.isHidden = false;
+        }
+        
+    }
 }
 
 

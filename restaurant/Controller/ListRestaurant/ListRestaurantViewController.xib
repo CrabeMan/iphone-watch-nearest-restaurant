@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListRestaurantViewController" customModule="restaurant" customModuleProvider="target">
             <connections>
+                <outlet property="animateLoading" destination="Plo-lP-Ruw" id="eRf-28-yoG"/>
                 <outlet property="tableViewRestaurant" destination="5Xz-6x-1ch" id="BhY-3c-bJa"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -27,18 +28,24 @@
                         <navigationItem id="lAA-t0-mIW"/>
                     </items>
                 </navigationBar>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" contentInsetAdjustmentBehavior="always" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5Xz-6x-1ch">
+                <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" contentInsetAdjustmentBehavior="always" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5Xz-6x-1ch">
                     <rect key="frame" x="0.0" y="44" width="375" height="623"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Plo-lP-Ruw">
+                    <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
+                    <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                </activityIndicatorView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="5Xz-6x-1ch" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="6uK-sJ-eSr"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="5Xz-6x-1ch" secondAttribute="trailing" id="Cdl-pb-EEj"/>
+                <constraint firstItem="Plo-lP-Ruw" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="HEt-1d-nwy"/>
                 <constraint firstItem="FK2-cZ-k2W" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="IRl-z2-Xef"/>
                 <constraint firstItem="5Xz-6x-1ch" firstAttribute="top" secondItem="FK2-cZ-k2W" secondAttribute="bottom" id="KcX-55-l4f"/>
                 <constraint firstItem="FK2-cZ-k2W" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Lj2-Vo-Xu2"/>
+                <constraint firstItem="Plo-lP-Ruw" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Xn9-SZ-iuT"/>
                 <constraint firstItem="FK2-cZ-k2W" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="c5C-Yq-leG"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="5Xz-6x-1ch" secondAttribute="bottom" id="dFD-cs-keg"/>
                 <constraint firstItem="FK2-cZ-k2W" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="oTF-4Y-JMl"/>

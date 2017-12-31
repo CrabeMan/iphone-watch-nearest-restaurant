@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol RestaurantRepository{
+protocol RestaurantRepository : Repository{
     
     func findAll(completion: (Result<[Restaurant]>) -> (Void))
     
