@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13529" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="13771" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch38" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="watchOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13507"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="13756"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
@@ -14,13 +14,41 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="restaurant_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <map width="1" height="1" alignment="left" id="GmH-Uj-i9T"/>
+                        <group width="1" height="1" alignment="left" layout="vertical" id="miz-BX-FbM">
+                            <items>
+                                <button width="1" alignment="left" title="Nearest" id="7AG-4c-Qub"/>
+                                <button width="1" alignment="left" title="All" id="XCl-t0-h8t"/>
+                            </items>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+        </scene>
+        <!--Detail Controller-->
+        <scene sceneID="5qh-I1-fQV">
+            <objects>
+                <controller id="vnw-Cm-fFU" customClass="DetailController" customModule="restaurant_WatchKit_Extension">
+                    <items>
+                        <group width="1" height="0.0" alignment="left" layout="vertical" id="quC-nK-hDu">
+                            <items>
+                                <label width="1" alignment="left" text="title" id="2Ph-5X-3DU" customClass="Detail"/>
+                                <label width="1" alignment="left" text="cuisine" id="Q8y-Ca-5xh"/>
+                                <label width="1" alignment="left" text="address" id="JgX-60-KSI"/>
+                                <group width="1" alignment="left" id="8jJ-n7-SKn">
+                                    <items>
+                                        <label width="0.69999999999999996" height="1" alignment="left" text="distance" id="HpA-g0-suD"/>
+                                        <imageView width="0.29999999999999999" alignment="left" id="x6c-cV-OZw"/>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
                     </items>
                     <connections>
-                        <outlet property="map" destination="GmH-Uj-i9T" id="tqb-33-fM2"/>
+                        <outlet property="title" destination="2Ph-5X-3DU" id="srh-l2-bfF"/>
                     </connections>
                 </controller>
             </objects>
+            <point key="canvasLocation" x="583" y="64"/>
         </scene>
     </scenes>
 </document>

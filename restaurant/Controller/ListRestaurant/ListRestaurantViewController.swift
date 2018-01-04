@@ -1,15 +1,7 @@
-//
-//  ListRestaurantViewController.swift
-//  restaurant
-//
-//  Created by Mohson Butt [DAN-PARIS] on 30/12/2017.
-//  Copyright © 2017 ESGI. All rights reserved.
-//
-
 import UIKit
 import WatchConnectivity
 
-class ListRestaurantViewController: UIViewController{
+class ListRestaurantViewController: UIViewController {
 
     @IBOutlet weak var tableViewRestaurant: UITableView!
     @IBOutlet weak var animateLoading: UIActivityIndicatorView!

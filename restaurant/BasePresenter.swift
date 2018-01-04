@@ -1,10 +1,20 @@
-//
-//  BasePresenter.swift
-//  restaurant
-//
-//  Created by Mohson Butt [DAN-PARIS] on 31/12/2017.
-//  Copyright © 2017 ESGI. All rights reserved.
-//
+import UIKit
 
-protocol BasePresenter{
+
+class BasePresenter<V, R> where V: BaseView, R: Repository {
+    
+    let repository: R
+    var view : V?
+    
+    init(repo : R) {
+        self.repository = repo
+    }
+    
+    func attachView(view: V) {
+        self.view = view
+    }
+    
+    func detachView() {
+        self.view = nil;
+    }
 }

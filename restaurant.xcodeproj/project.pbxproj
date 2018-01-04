@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		668533591FFE5B6E00EDD89C /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668533581FFE5B6E00EDD89C /* RootViewController.swift */; };
+		6685335E1FFE699700EDD89C /* DetailRestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6685335C1FFE699700EDD89C /* DetailRestaurantViewController.swift */; };
+		6685335F1FFE699700EDD89C /* DetailRestaurantViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6685335D1FFE699700EDD89C /* DetailRestaurantViewController.xib */; };
+		668533611FFE764F00EDD89C /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668533601FFE764F00EDD89C /* DetailController.swift */; };
 		669F13531FE01473008533EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669F13521FE01473008533EB /* AppDelegate.swift */; };
 		669F13551FE01473008533EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 669F13541FE01473008533EB /* ViewController.swift */; };
 		669F135A1FE01473008533EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 669F13591FE01473008533EB /* Assets.xcassets */; };
@@ -28,7 +32,6 @@
 		C4065B021FF831390026797D /* UIColor+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4065B011FF831390026797D /* UIColor+Init.swift */; };
 		C4065B051FF831750026797D /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4065B041FF831750026797D /* Color.swift */; };
 		C4065B141FF838910026797D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4065B121FF838910026797D /* Localizable.strings */; };
-		C419CA781FF83FB80008D4C0 /* TabBarHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C419CA771FF83FB80008D4C0 /* TabBarHelper.swift */; };
 		C419CA7B1FF904F50008D4C0 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C419CA791FF904F50008D4C0 /* MapViewController.swift */; };
 		C419CA7C1FF904F50008D4C0 /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C419CA7A1FF904F50008D4C0 /* MapViewController.xib */; };
 		C419CA7F1FF908390008D4C0 /* ListRestaurantPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C419CA7E1FF908390008D4C0 /* ListRestaurantPresenter.swift */; };
@@ -85,6 +88,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		668533581FFE5B6E00EDD89C /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
+		6685335C1FFE699700EDD89C /* DetailRestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailRestaurantViewController.swift; sourceTree = "<group>"; };
+		6685335D1FFE699700EDD89C /* DetailRestaurantViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailRestaurantViewController.xib; sourceTree = "<group>"; };
+		668533601FFE764F00EDD89C /* DetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 		669F13501FE01473008533EB /* HomeKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		669F13521FE01473008533EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		669F13541FE01473008533EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -112,7 +119,6 @@
 		C4065B0F1FF838080026797D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		C4065B131FF838910026797D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C4065B151FF838B90026797D /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
-		C419CA771FF83FB80008D4C0 /* TabBarHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarHelper.swift; sourceTree = "<group>"; };
 		C419CA791FF904F50008D4C0 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		C419CA7A1FF904F50008D4C0 /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
 		C419CA7E1FF908390008D4C0 /* ListRestaurantPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRestaurantPresenter.swift; sourceTree = "<group>"; };
@@ -151,6 +157,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6685335A1FFE693500EDD89C /* DetailRestaurant */ = {
+			isa = PBXGroup;
+			children = (
+				6685335C1FFE699700EDD89C /* DetailRestaurantViewController.swift */,
+				6685335D1FFE699700EDD89C /* DetailRestaurantViewController.xib */,
+			);
+			path = DetailRestaurant;
+			sourceTree = "<group>";
+		};
+		6685335B1FFE694200EDD89C /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				C419CA791FF904F50008D4C0 /* MapViewController.swift */,
+				C419CA7A1FF904F50008D4C0 /* MapViewController.xib */,
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
 		669F13511FE01473008533EB /* HomeKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -220,6 +244,7 @@
 				66AF1EE61FCF261D008E8E36 /* ExtensionDelegate.swift */,
 				66AF1EE81FCF261E008E8E36 /* Assets.xcassets */,
 				66AF1EEA1FCF261E008E8E36 /* Info.plist */,
+				668533601FFE764F00EDD89C /* DetailController.swift */,
 			);
 			path = "restaurant WatchKit Extension";
 			sourceTree = "<group>";
@@ -243,9 +268,10 @@
 		C419CA751FF83F880008D4C0 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				6685335B1FFE694200EDD89C /* Map */,
+				6685335A1FFE693500EDD89C /* DetailRestaurant */,
 				C419CA7D1FF907EF0008D4C0 /* ListRestaurant */,
-				C419CA791FF904F50008D4C0 /* MapViewController.swift */,
-				C419CA7A1FF904F50008D4C0 /* MapViewController.xib */,
+				668533581FFE5B6E00EDD89C /* RootViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -254,7 +280,6 @@
 			isa = PBXGroup;
 			children = (
 				66AF1EFA1FCF342C008E8E36 /* ApiService.swift */,
-				C419CA771FF83FB80008D4C0 /* TabBarHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -447,6 +472,7 @@
 				C4065B141FF838910026797D /* Localizable.strings in Resources */,
 				66AF1ECC1FCF261D008E8E36 /* LaunchScreen.storyboard in Resources */,
 				C419CA7C1FF904F50008D4C0 /* MapViewController.xib in Resources */,
+				6685335F1FFE699700EDD89C /* DetailRestaurantViewController.xib in Resources */,
 				66AF1EC91FCF261D008E8E36 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -486,10 +512,11 @@
 			files = (
 				C43F0AE91FF8139A002F7318 /* ListRestaurantViewController.swift in Sources */,
 				C419CA851FF908F60008D4C0 /* BasePresenter.swift in Sources */,
+				668533591FFE5B6E00EDD89C /* RootViewController.swift in Sources */,
 				C419CA7F1FF908390008D4C0 /* ListRestaurantPresenter.swift in Sources */,
-				C419CA781FF83FB80008D4C0 /* TabBarHelper.swift in Sources */,
 				66AF1F001FCF3B39008E8E36 /* Restaurant.swift in Sources */,
 				C4065AFD1FF81C6E0026797D /* Configuration.swift in Sources */,
+				6685335E1FFE699700EDD89C /* DetailRestaurantViewController.swift in Sources */,
 				C4065B051FF831750026797D /* Color.swift in Sources */,
 				C4065B021FF831390026797D /* UIColor+Init.swift in Sources */,
 				C419CA811FF908620008D4C0 /* Repository.swift in Sources */,
@@ -508,6 +535,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				668533611FFE764F00EDD89C /* DetailController.swift in Sources */,
 				66AF1EE71FCF261D008E8E36 /* ExtensionDelegate.swift in Sources */,
 				66AF1EE51FCF261D008E8E36 /* InterfaceController.swift in Sources */,
 				66AF1EFD1FCF3A25008E8E36 /* Restaurant.swift in Sources */,
