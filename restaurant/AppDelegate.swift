@@ -13,7 +13,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //UIApplication.shared.statusBarStyle(.lightContent, animated: true)
         
         let windows = UIWindow(frame: UIScreen.main.bounds)
-        windows.rootViewController = TabBarHelper.mainTabBar
+        //windows.rootViewController = TabBarHelper.mainTabBar
+        windows.rootViewController = RootViewController()
         windows.makeKeyAndVisible()
         self.window = windows
         

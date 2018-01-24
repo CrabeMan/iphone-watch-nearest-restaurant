@@ -1,11 +1,3 @@
-//
-//  ListRestaurantViewController.swift
-//  restaurant
-//
-//  Created by Mohson Butt [DAN-PARIS] on 30/12/2017.
-//  Copyright © 2017 ESGI. All rights reserved.
-//
-
 import UIKit
 import WatchConnectivity
 
@@ -51,7 +43,6 @@ class ListRestaurantViewController: UIViewController{
         
         self.listPresenter.getNextRestaurantPage { () -> (Void) in
         }
-    
     }
 
     func reloadRows()  {
@@ -88,7 +79,7 @@ extension ListRestaurantViewController : UITableViewDataSource{
     }
     
 }
-extension ListRestaurantViewController : ListRestaurantView{
+extension ListRestaurantViewController : RootView {
     func startLoading() {
         self.animateLoading.startAnimating()
     }

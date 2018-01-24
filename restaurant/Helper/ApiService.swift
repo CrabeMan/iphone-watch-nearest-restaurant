@@ -34,6 +34,8 @@ class ApiService {
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         
+        print(url.absoluteURL)
+        
         let postString = self.formatPostData(params: params)
         request.httpBody = postString.data(using: .utf8)
         
