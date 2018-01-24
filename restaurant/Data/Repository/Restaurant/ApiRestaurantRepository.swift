@@ -12,8 +12,8 @@ import Foundation
 class ApiRestaurantRepository: RestaurantRepository {
     
     
-    func findAll(completion: @escaping (Result<[Restaurant]>) -> (Void)){
-        ApiService.callGet(url: Configuration.environment + "restaurant") { (message,data) in
+    func findAll(limit: Int, offset: Int, completion: @escaping (Result<[Restaurant]>) -> (Void)){
+        ApiService.callGet(url: Configuration.environment + "restaurant?limit=" + String(limit) + "&offset=" + String(offset)) { (message,data) in
             let result = Result<[Restaurant]>()
             do {
                 if let jsonData = data {

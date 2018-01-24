@@ -14,7 +14,7 @@ target 'restaurant' do
   use_frameworks!
   pod 'Alamofire', '~> 4.5'
   pod 'AlamofireImage', '~> 3.3'
-
+  pod 'UIScrollView-InfiniteScroll', '~> 1.0.0'
 end
 
 target 'restaurant WatchKit App' do

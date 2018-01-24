@@ -38,6 +38,28 @@ extension Restaurant: Decodable {
         self.cuisine     = try restaurant.decode(String.self, forKey: .cuisine)
         self.horaire     = try restaurant.decode(String.self, forKey: .horaire)
         self.note        = try restaurant.decode(Double.self, forKey: .note)
-        self.distance    = try restaurant.decode(Float.self, forKey: .distance)
+        do {
+            self.distance = try restaurant.decode(Float.self, forKey: .distance)
+        } catch {
+            self.distance = 0
+        }
+    }
+}
+
+extension Restaurant: Encodable {
+    func encode(to encoder: Encoder) throws {
+        var restaurant = encoder.container(keyedBy: RestaurantKeys.self)
+        try restaurant.encode(self.id, forKey: .id)
+        try restaurant.encode(self.title, forKey: .title)
+        try restaurant.encode(self.address, forKey: .address)
+        try restaurant.encode(self.city, forKey: .city)
+        try restaurant.encode(self.country, forKey: .country)
+        try restaurant.encode(self.latitude, forKey: .latitude)
+        try restaurant.encode(self.longitude, forKey: .longitude)
+        try restaurant.encode(self.photo, forKey: .photo)
+        try restaurant.encode(self.cuisine, forKey: .cuisine)
+        try restaurant.encode(self.horaire, forKey: .horaire)
+        try restaurant.encode(self.note, forKey: .note)
+        try restaurant.encode(self.distance, forKey: .distance)
     }
 }
