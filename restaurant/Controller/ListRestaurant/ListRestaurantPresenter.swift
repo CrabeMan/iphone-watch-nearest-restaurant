@@ -13,6 +13,9 @@ class ListRestaurantPresenter: BasePresenter {
     private let listRepository: ApiRestaurantRepository
     weak private var listView : ListRestaurantView?
     
+    private let limit = 30
+    private var currentPage = 0
+    
     init(repo : Repository) {
         self.listRepository = repo as! ApiRestaurantRepository
     }
@@ -40,24 +43,25 @@ class ListRestaurantPresenter: BasePresenter {
                 return
             }
             
-            self.listView?.setListRestaurant(res: data)
+            self.listView?.addListRestaurant(res: data)
             
         }
     }
     
-    func getAllRestaurant(){
+    func getNextRestaurantPage(onEnd: @escaping () -> (Void)) {
         self.listView?.startLoading();
-        self.listRepository.findAll { (result) -> (Void) in
-            
+        self.listRepository.findAll(limit: limit, offset: limit*currentPage) { (result) -> (Void) in
             guard let data = result.success else {
                 if let error = result.error {
-                    self.listView?.setEmptyRestaurant()
+                    //self.listView?.setEmptyRestaurant()
                     self.listView?.finishLoading()
                 }
                 return
             }
             
-            self.listView?.setListRestaurant(res: data)
+            self.currentPage += 1
+            self.listView?.addListRestaurant(res: data)
+            onEnd()
         }
     }
         

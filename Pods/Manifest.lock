@@ -2,15 +2,18 @@ PODS:
   - Alamofire (4.6.0)
   - AlamofireImage (3.3.0):
     - Alamofire (~> 4.5)
+  - UIScrollView-InfiniteScroll (1.0.2)
 
 DEPENDENCIES:
   - Alamofire (~> 4.5)
   - AlamofireImage (~> 3.3)
+  - UIScrollView-InfiniteScroll (~> 1.0.0)
 
 SPEC CHECKSUMS:
   Alamofire: f41a599bd63041760b26d393ec1069d9d7b917f4
   AlamofireImage: 2e784dc5d00f04903a52c1d169181469c805c3df
+  UIScrollView-InfiniteScroll: c132d6d5851daff229ab4a1060ccf70a05a051c9
 
-PODFILE CHECKSUM: eced4ef194c9c632a40f45db5a431fbcd7e37005
+PODFILE CHECKSUM: 21450c28493e20c5952a6609eeadf7a09b8b97bd
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.4.0

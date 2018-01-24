@@ -25,6 +25,18 @@ class ListRestaurantViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        tableViewRestaurant.addInfiniteScroll { (tableView) -> Void in
+            self.listPresenter.getNextRestaurantPage(onEnd: { () -> (Void) in
+                DispatchQueue.main.async{
+                    tableView.finishInfiniteScroll()
+                }
+            })
+        }
+    
+        tableViewRestaurant.setShouldShowInfiniteScrollHandler { _ -> Bool in
+            return true
+        }
+        
         self.navigationItem.title = "Liste Restaurant"
         self.tableViewRestaurant.delegate = self;
         self.tableViewRestaurant.dataSource = self;
@@ -37,8 +49,8 @@ class ListRestaurantViewController: UIViewController{
             session.activate()
         }
         
-        self.listPresenter.getNearestRest(lat: "48.8752937317", long: "2.2851102352")
-        //self.listPresenter.getAllRestaurant()
+        self.listPresenter.getNextRestaurantPage { () -> (Void) in
+        }
     
     }
 
@@ -87,8 +99,10 @@ extension ListRestaurantViewController : ListRestaurantView{
         }
     }
     
-    func setListRestaurant(res : [Restaurant]){
-        self.restaurant = res
+    func addListRestaurant(res : [Restaurant]) {
+        for r in res {
+            self.restaurant.append(r)
+        }
         DispatchQueue.main.async{
             self.tableViewRestaurant.isHidden = false;
             self.finishLoading()
