@@ -15,8 +15,8 @@ class InterfaceController: WKInterfaceController {
         let mapLocation: CLLocationCoordinate2D = CLLocationCoordinate2DMake(37, -122);
         let coordinateSpan:MKCoordinateSpan = MKCoordinateSpanMake(1, 1);
         
-        self.map.addAnnotation(mapLocation, with: .purple)
-        self.map.setRegion(MKCoordinateRegionMake(mapLocation, coordinateSpan))
+        //self.map.addAnnotation(mapLocation, with: .purple)
+        //self.map.setRegion(MKCoordinateRegionMake(mapLocation, coordinateSpan))
     }
     
     override func willActivate() {
@@ -31,7 +31,7 @@ class InterfaceController: WKInterfaceController {
     override func didDeactivate() {
         super.didDeactivate()
     }
-
+    
 }
 
 extension InterfaceController: WCSessionDelegate {
@@ -47,3 +47,4 @@ extension InterfaceController: WCSessionDelegate {
     }
     
 }
+

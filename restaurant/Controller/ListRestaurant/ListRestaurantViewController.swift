@@ -1,7 +1,7 @@
 import UIKit
 import WatchConnectivity
 
-class ListRestaurantViewController: UIViewController{
+class ListRestaurantViewController: UIViewController {
 
     @IBOutlet weak var tableViewRestaurant: UITableView!
     @IBOutlet weak var animateLoading: UIActivityIndicatorView!
@@ -53,13 +53,22 @@ class ListRestaurantViewController: UIViewController{
 }
 
 
-extension ListRestaurantViewController : UITableViewDelegate{
-    
+extension ListRestaurantViewController : UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let row = indexPath.row
+        
+        print(self.restaurant[row].title)
+        
+        
+    }
     
 }
 
 
-extension ListRestaurantViewController : UITableViewDataSource{
+extension ListRestaurantViewController : UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.restaurant.count
     }
@@ -79,6 +88,7 @@ extension ListRestaurantViewController : UITableViewDataSource{
     }
     
 }
+
 extension ListRestaurantViewController : RootView {
     func startLoading() {
         self.animateLoading.startAnimating()
