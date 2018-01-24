@@ -38,6 +38,7 @@ class ListRestaurantViewController: UIViewController{
         }
         
         self.listPresenter.getNearestRest(lat: "48.8752937317", long: "2.2851102352")
+        //self.listPresenter.getAllRestaurant()
     
     }
 
@@ -81,7 +82,9 @@ extension ListRestaurantViewController : ListRestaurantView{
     }
     
     func finishLoading() {
-        self.animateLoading.stopAnimating()
+        DispatchQueue.main.async{
+                self.animateLoading.stopAnimating()
+        }
     }
     
     func setListRestaurant(res : [Restaurant]){

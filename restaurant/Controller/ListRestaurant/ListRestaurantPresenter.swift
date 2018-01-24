@@ -29,19 +29,35 @@ class ListRestaurantPresenter: BasePresenter {
     func getNearestRest(lat: String, long: String){
         
         self.listView?.startLoading();
-        
+    
         self.listRepository.getNearest(lat: lat, long: long) { (result) in
             
             guard let data = result.success else {
                 if let error = result.error {
-                    print(error)
                     self.listView?.setEmptyRestaurant()
+                    self.listView?.finishLoading()
                 }
                 return
             }
             
             self.listView?.setListRestaurant(res: data)
             
+        }
+    }
+    
+    func getAllRestaurant(){
+        self.listView?.startLoading();
+        self.listRepository.findAll { (result) -> (Void) in
+            
+            guard let data = result.success else {
+                if let error = result.error {
+                    self.listView?.setEmptyRestaurant()
+                    self.listView?.finishLoading()
+                }
+                return
+            }
+            
+            self.listView?.setListRestaurant(res: data)
         }
     }
         

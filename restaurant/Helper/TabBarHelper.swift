@@ -22,8 +22,9 @@ class TabBarHelper{
             tabBar.setViewControllers([listRestaurantController, mapController], animated: true)
             
             // Tar Bar Items
-            listRestaurantController.tabBarItem = UITabBarItem(title: "Restaurant", image: nil, selectedImage: nil)
-            mapController.tabBarItem = UITabBarItem(title: "Maps", image: nil, selectedImage: nil)
+            
+            listRestaurantController.tabBarItem = UITabBarItem(title: NSLocalizedString("Restaurant", comment: "restaurant title"), image: nil, selectedImage: nil)
+            mapController.tabBarItem = UITabBarItem(title: NSLocalizedString("Maps", comment: "maps title"), image: nil, selectedImage: nil)
             return tabBar
         }
     }

@@ -13,7 +13,7 @@ struct Configuration {
     #if DEBUG
     
     enum Environment: String {
-        case Dev = "http://localhost:5000/"
+        case Dev = "http://mustache.labite.win:5000/"
     }
     
     static let environment = Environment.Dev.rawValue//we can change this at any time
