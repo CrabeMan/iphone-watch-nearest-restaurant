@@ -7,6 +7,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     var locationManager: CLLocationManager!
     @IBOutlet weak var mapView: MKMapView!
     
+    @IBOutlet weak var loader: UIActivityIndicatorView!
+    
     private let mapPresenter = MapViewPresenter(repo: ApiRestaurantRepository())
     
     var requestRun: Bool = false
@@ -14,6 +16,9 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        mapPresenter.attachView(view: self)
+        
         mapView.delegate = self
         mapView.mapType = MKMapType.standard
         
@@ -38,13 +43,12 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let userLocation:CLLocation = locations[0] as CLLocation
         
-        let viewRegion = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 400, 400)
+        let viewRegion = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 800, 800)
         mapView.setRegion(viewRegion, animated: false)
         
         if requestRun == false && requestCount < 1 {
             requestRun = true
             mapPresenter.getNearestRest(lat: String(userLocation.coordinate.latitude), long: String(userLocation.coordinate.longitude), onEnd: { () -> (Void) in
-                print("ok")
                 self.requestRun = false
                 self.requestCount += 1
             })
@@ -58,5 +62,34 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
 
 
 extension MapViewController: MKMapViewDelegate {
+    
+    
+    
+}
+
+
+extension MapViewController: RootView {
+    func startLoading() {
+        loader.isHidden = false
+    }
+    
+    func finishLoading() {
+        loader.isHidden = true
+    }
+    
+    func addListRestaurant(res: [Restaurant]) {
+        for r in res {
+            let pointAnnoation = MKPointAnnotation()
+            pointAnnoation.title = r.title
+            pointAnnoation.subtitle = r.address
+            pointAnnoation.coordinate = CLLocationCoordinate2DMake(Double(r.latitude), Double(r.longitude))
+            mapView?.addAnnotation(pointAnnoation)
+        }
+    }
+    
+    func setEmptyRestaurant() {
+        
+    }
+    
     
 }

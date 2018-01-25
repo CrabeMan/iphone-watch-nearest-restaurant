@@ -26,7 +26,6 @@ struct Restaurant {
 extension Restaurant: Decodable {
     init(from decoder: Decoder) throws {
         let restaurant = try decoder.container(keyedBy: RestaurantKeys.self)
-        
         self.id          = try restaurant.decode(Int.self, forKey: .id)
         self.title       = try restaurant.decode(String.self, forKey: .title)
         self.address     = try restaurant.decode(String.self, forKey: .address)
