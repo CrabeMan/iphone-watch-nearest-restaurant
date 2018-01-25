@@ -27,6 +27,8 @@
 		66AF1EFB1FCF342C008E8E36 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF1EFA1FCF342C008E8E36 /* ApiService.swift */; };
 		66AF1EFD1FCF3A25008E8E36 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF1EFC1FCF3A25008E8E36 /* Restaurant.swift */; };
 		66AF1F001FCF3B39008E8E36 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66AF1EFC1FCF3A25008E8E36 /* Restaurant.swift */; };
+		C37C6076201901E100FFFCFE /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37C6075201901E100FFFCFE /* ListController.swift */; };
+		C37C607D2019482B00FFFCFE /* RateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37C607C2019482B00FFFCFE /* RateController.swift */; };
 		C4065AFD1FF81C6E0026797D /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4065AFC1FF81C6E0026797D /* Configuration.swift */; };
 		C4065AFF1FF822830026797D /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4065AFE1FF822830026797D /* Result.swift */; };
 		C4065B021FF831390026797D /* UIColor+Init.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4065B011FF831390026797D /* UIColor+Init.swift */; };
@@ -111,6 +113,8 @@
 		66AF1EEA1FCF261E008E8E36 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		66AF1EFA1FCF342C008E8E36 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		66AF1EFC1FCF3A25008E8E36 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		C37C6075201901E100FFFCFE /* ListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
+		C37C607C2019482B00FFFCFE /* RateController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RateController.swift; sourceTree = "<group>"; };
 		C4065AFC1FF81C6E0026797D /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		C4065AFE1FF822830026797D /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		C4065B011FF831390026797D /* UIColor+Init.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Init.swift"; sourceTree = "<group>"; };
@@ -245,6 +249,8 @@
 				66AF1EE81FCF261E008E8E36 /* Assets.xcassets */,
 				66AF1EEA1FCF261E008E8E36 /* Info.plist */,
 				668533601FFE764F00EDD89C /* DetailController.swift */,
+				C37C6075201901E100FFFCFE /* ListController.swift */,
+				C37C607C2019482B00FFFCFE /* RateController.swift */,
 			);
 			path = "restaurant WatchKit Extension";
 			sourceTree = "<group>";
@@ -536,9 +542,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				668533611FFE764F00EDD89C /* DetailController.swift in Sources */,
+				C37C6076201901E100FFFCFE /* ListController.swift in Sources */,
 				66AF1EE71FCF261D008E8E36 /* ExtensionDelegate.swift in Sources */,
 				66AF1EE51FCF261D008E8E36 /* InterfaceController.swift in Sources */,
 				66AF1EFD1FCF3A25008E8E36 /* Restaurant.swift in Sources */,
+				C37C607D2019482B00FFFCFE /* RateController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

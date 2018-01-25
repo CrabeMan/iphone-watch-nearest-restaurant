@@ -15,8 +15,8 @@ class InterfaceController: WKInterfaceController {
         let mapLocation: CLLocationCoordinate2D = CLLocationCoordinate2DMake(37, -122);
         let coordinateSpan:MKCoordinateSpan = MKCoordinateSpanMake(1, 1);
         
-        self.map.addAnnotation(mapLocation, with: .purple)
-        self.map.setRegion(MKCoordinateRegionMake(mapLocation, coordinateSpan))
+        //self.map.addAnnotation(mapLocation, with: .purple)
+        //self.map.setRegion(MKCoordinateRegionMake(mapLocation, coordinateSpan))
     }
     
     override func willActivate() {
@@ -39,11 +39,15 @@ extension InterfaceController: WCSessionDelegate {
         
     }
     
-    func session(_ session: WCSession, didReceiveMessageData messageData: Data, replyHandler: @escaping (Data) -> Void) {
+    func session(_ session: WCSession, didReceiveUserInfo userInfo: [String : Any] = [:]) {
+        //print(userInfo)
         
-    }
-    
-    func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String: Any]) -> Void) {
+        guard let restaurant = try? JSONDecoder().decode(Restaurant.self, from: userInfo["restaurant"] as! Data) else {
+            return
+        }
+        print(restaurant)
+        
+        presentController(withName: "DetailController", context: restaurant)
     }
     
 }

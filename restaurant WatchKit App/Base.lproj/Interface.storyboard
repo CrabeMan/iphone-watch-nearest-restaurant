@@ -24,31 +24,104 @@
                 </controller>
             </objects>
         </scene>
-        <!--Detail Controller-->
+        <!--DetailController-->
         <scene sceneID="5qh-I1-fQV">
             <objects>
-                <controller id="vnw-Cm-fFU" customClass="DetailController" customModule="restaurant_WatchKit_Extension">
+                <controller identifier="DetailController" id="vnw-Cm-fFU" customClass="DetailController" customModule="restaurant_WatchKit_Extension">
                     <items>
                         <group width="1" height="0.0" alignment="left" layout="vertical" id="quC-nK-hDu">
                             <items>
-                                <label width="1" alignment="left" text="title" id="2Ph-5X-3DU" customClass="Detail"/>
-                                <label width="1" alignment="left" text="cuisine" id="Q8y-Ca-5xh"/>
+                                <imageView alignment="left" id="x6c-cV-OZw"/>
+                                <label width="1" alignment="left" text="title" id="2Ph-5X-3DU" customClass="Detai"/>
+                                <label width="1" alignment="left" text="cuisine" numberOfLines="10" id="Q8y-Ca-5xh"/>
                                 <label width="1" alignment="left" text="address" id="JgX-60-KSI"/>
-                                <group width="1" alignment="left" id="8jJ-n7-SKn">
-                                    <items>
-                                        <label width="0.69999999999999996" height="1" alignment="left" text="distance" id="HpA-g0-suD"/>
-                                        <imageView width="0.29999999999999999" alignment="left" id="x6c-cV-OZw"/>
-                                    </items>
-                                </group>
+                                <label alignment="left" text="distance" id="HpA-g0-suD"/>
                             </items>
                         </group>
+                        <button width="1" alignment="left" title="Noter" id="nZz-B0-AXK">
+                            <connections>
+                                <action selector="rateButton" destination="vnw-Cm-fFU" id="h1P-jp-WMJ"/>
+                            </connections>
+                        </button>
+                        <button width="1" alignment="left" title="Y aller" id="N3j-sv-4tr">
+                            <connections>
+                                <action selector="goButton" destination="vnw-Cm-fFU" id="fsR-ut-2ha"/>
+                            </connections>
+                        </button>
+                        <map height="100" alignment="left" id="U9W-vO-MlJ"/>
                     </items>
                     <connections>
-                        <outlet property="title" destination="2Ph-5X-3DU" id="srh-l2-bfF"/>
+                        <outlet property="addressText" destination="JgX-60-KSI" id="VUv-u5-brV"/>
+                        <outlet property="cuisineText" destination="Q8y-Ca-5xh" id="n5b-s2-zYK"/>
+                        <outlet property="distanceText" destination="HpA-g0-suD" id="bWc-LF-5XZ"/>
+                        <outlet property="image" destination="x6c-cV-OZw" id="9pf-KU-Ke0"/>
+                        <outlet property="map" destination="U9W-vO-MlJ" id="Ehu-Mp-3Jk"/>
+                        <outlet property="titleText" destination="2Ph-5X-3DU" id="vDy-fS-Dmq"/>
                     </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="583" y="64"/>
+        </scene>
+        <!--List Controller-->
+        <scene sceneID="TDE-i5-b0i">
+            <objects>
+                <controller id="zeT-SM-1lf" customClass="ListController" customModule="restaurant_WatchKit_Extension">
+                    <items>
+                        <group width="1" height="1" alignment="left" layout="vertical" id="ycU-zX-56K">
+                            <items>
+                                <table alignment="left" id="0HY-46-Did">
+                                    <items>
+                                        <tableRow id="gch-Gy-1dI">
+                                            <group key="rootItem" width="1" alignment="left" id="MZa-y1-n0S"/>
+                                        </tableRow>
+                                    </items>
+                                </table>
+                            </items>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="311" y="373"/>
+        </scene>
+        <!--RateController-->
+        <scene sceneID="DIv-hl-NP4">
+            <objects>
+                <controller identifier="RateController" id="KBL-qa-EGg" customClass="RateController" customModule="restaurant_WatchKit_Extension">
+                    <items>
+                        <group width="1" height="1" alignment="left" layout="vertical" id="awM-AW-SqB">
+                            <items>
+                                <table alignment="left" id="byp-LU-SA1"/>
+                                <group width="1" alignment="left" id="6vi-fg-eBy">
+                                    <items>
+                                        <button width="0.29999999999999999" alignment="left" title="-" id="EOT-JR-7eG">
+                                            <connections>
+                                                <action selector="lessClicked" destination="KBL-qa-EGg" id="4hE-CF-IRG"/>
+                                            </connections>
+                                        </button>
+                                        <label width="0.40000000000000002" alignment="center" verticalAlignment="center" text="1" textAlignment="center" id="yHN-l7-Kzp"/>
+                                        <button width="0.29999999999999999" alignment="right" verticalAlignment="center" title="+" id="0CA-Ng-yp1">
+                                            <connections>
+                                                <action selector="moreClicked" destination="KBL-qa-EGg" id="nH7-rN-rNI"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                                <button width="1" alignment="left" title="Send" id="qeE-9G-nAv">
+                                    <connections>
+                                        <action selector="rateClicked" destination="KBL-qa-EGg" id="MHs-70-nCG"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="lessButton" destination="EOT-JR-7eG" id="kKm-eL-QEn"/>
+                        <outlet property="moreButton" destination="0CA-Ng-yp1" id="gRx-Ot-72D"/>
+                        <outlet property="rateLabel" destination="yHN-l7-Kzp" id="Dw6-6a-Hx4"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="566" y="518"/>
         </scene>
     </scenes>
 </document>

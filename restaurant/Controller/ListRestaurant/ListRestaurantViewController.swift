@@ -28,7 +28,7 @@ class ListRestaurantViewController: UIViewController {
             session.delegate = self
             session.activate()
         }
-        
+        //todo get location
         self.listPresenter.getNearestRest(lat: "48.8752937317", long: "2.2851102352")
     
     }
@@ -42,7 +42,29 @@ class ListRestaurantViewController: UIViewController {
 
 
 extension ListRestaurantViewController : UITableViewDelegate{
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let row = indexPath.row
+        
+        print(self.restaurant[row].title)
+        
+        let session = WCSession.default
+        guard session.isPaired && session.isWatchAppInstalled else {
+            return
+        }
+        
+        guard let encodedRestaurant = try? JSONEncoder().encode(self.restaurant[row]) else {
+            return
+        }
+        
+        print(encodedRestaurant)
+        
+        session.transferUserInfo([
+            "restaurant": encodedRestaurant,
+        ])
+    }
     
 }
 
