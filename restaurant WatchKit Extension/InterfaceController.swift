@@ -39,12 +39,15 @@ extension InterfaceController: WCSessionDelegate {
         
     }
     
-    func session(_ session: WCSession, didReceiveMessageData messageData: Data, replyHandler: @escaping (Data) -> Void) {
+    func session(_ session: WCSession, didReceiveUserInfo userInfo: [String : Any] = [:]) {
+        //print(userInfo)
         
-    }
-    
-    func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String: Any]) -> Void) {
+        guard let restaurant = try? JSONDecoder().decode(Restaurant.self, from: userInfo["restaurant"] as! Data) else {
+            return
+        }
+        print(restaurant)
+        
+        presentController(withName: "DetailController", context: restaurant)
     }
     
 }
-

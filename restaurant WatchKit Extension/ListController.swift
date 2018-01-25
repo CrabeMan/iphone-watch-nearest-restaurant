@@ -1,11 +1,3 @@
-//
-//  ListController.swift
-//  restaurant WatchKit Extension
-//
-//  Created by Grunt on 14/01/2018.
-//  Copyright © 2018 ESGI. All rights reserved.
-//
-
 import WatchKit
 import Foundation
 import WatchConnectivity
@@ -25,5 +17,4 @@ class ListController: WKInterfaceController {
         super.didDeactivate()
     }
 }
-
 

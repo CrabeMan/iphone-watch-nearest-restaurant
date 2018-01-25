@@ -53,7 +53,7 @@ class ListRestaurantViewController: UIViewController {
 }
 
 
-extension ListRestaurantViewController : UITableViewDelegate {
+extension ListRestaurantViewController : UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         tableView.deselectRow(at: indexPath, animated: true)
@@ -62,10 +62,23 @@ extension ListRestaurantViewController : UITableViewDelegate {
         
         print(self.restaurant[row].title)
         
+        let session = WCSession.default
+        guard session.isPaired && session.isWatchAppInstalled else {
+            return
+        }
         
+        guard let encodedRestaurant = try? JSONEncoder().encode(self.restaurant[row]) else {
+            return
+        }
+        
+        print(encodedRestaurant)
+        
+        session.transferUserInfo([
+            "restaurant": encodedRestaurant,
+            ])
     }
-    
 }
+
 
 
 extension ListRestaurantViewController : UITableViewDataSource {
